@@ -278,6 +278,7 @@ const Skills = () => {
     },
   ];
   const [columns, setColumns] = useState(1);
+  const [isMounted, setIsMounted] = useState(false);
   const gridRef = useRef<HTMLDivElement | null>(null);
   const [page, setPage] = useState(0);
   const handleCategoryClick = (idx: number) => {
@@ -297,6 +298,10 @@ const Skills = () => {
     setColumns(compute());
     window.addEventListener("resize", onResize, { passive: true });
     return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    setIsMounted(true);
   }, []);
 
   // Reset pagination when category or breakpoint changes
@@ -377,7 +382,7 @@ const Skills = () => {
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
             key={`${activeCategory}-${
-              columns === 1
+              isMounted && columns === 1
                 ? Math.min(
                     page,
                     Math.ceil(
@@ -391,7 +396,7 @@ const Skills = () => {
           >
             {(() => {
               const skills = skillCategories[activeCategory].skills;
-              const isMobile = columns === 1;
+              const isMobile = isMounted && columns === 1;
               const pageSize = 5;
               const totalPages = isMobile
                 ? Math.ceil(skills.length / pageSize)
@@ -453,7 +458,9 @@ const Skills = () => {
         </AnimatePresence>
 
         {/* Mobile pagination */}
-        {columns === 1 && skillCategories[activeCategory].skills.length > 5 && (
+        {isMounted &&
+          columns === 1 &&
+          skillCategories[activeCategory].skills.length > 5 && (
           <div className="mt-6 flex items-center justify-center gap-3 sm:hidden">
             <button
               type="button"
