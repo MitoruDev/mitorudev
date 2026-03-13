@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState, useCallback, useEffect } from "react";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import {
@@ -15,20 +16,22 @@ import {
 import { motion } from "motion/react";
 
 const navigationItems = [
-  { name: "Home", href: "/", icon: Home, showOnMedium: true },
-  { name: "About", href: "/#about", icon: User, showOnMedium: true },
-  { name: "Skills", href: "/#skills", icon: Code, showOnMedium: true },
+  { name: "Home", href: "/", icon: Home, showOnMedium: true, sectionId: null },
+  { name: "About", href: "/#about", icon: User, showOnMedium: true, sectionId: "about" },
+  { name: "Skills", href: "/#skills", icon: Code, showOnMedium: true, sectionId: "skills" },
   {
     name: "Experience",
     href: "/#experience",
     icon: GraduationCap,
     showOnMedium: false,
+    sectionId: "experience",
   },
   {
     name: "Contact",
     href: "/#contact",
     icon: MessageCircle,
     showOnMedium: false,
+    sectionId: "contact",
   },
 ];
 
@@ -43,7 +46,7 @@ const NavItem = ({
   isActive?: boolean;
   size?: "sm" | "md" | "lg";
   isMobile?: boolean;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }) => {
   const Icon = item.icon;
   const padding =
@@ -72,6 +75,7 @@ const NavItem = ({
     <Link
       href={item.href}
       className={`${baseClasses} ${activeClasses}`}
+      onClick={onClick}
     >
       <Icon size={iconSize} />
       <span>{item.name}</span>
@@ -112,18 +116,39 @@ const HireMeButton = ({
   );
 };
 
+const SECTION_IDS = ["about", "skills", "experience", "contact"] as const;
+const ACTIVATION_OFFSET = 120; // px from top of viewport – section "active" when its top is above this
+
+function getActiveSection(): string {
+  if (typeof window === "undefined") return "Home";
+  const offset = ACTIVATION_OFFSET;
+  let active: string = "Home";
+  for (let i = SECTION_IDS.length - 1; i >= 0; i--) {
+    const el = document.getElementById(SECTION_IDS[i]);
+    if (el) {
+      const { top } = el.getBoundingClientRect();
+      if (top <= offset) {
+        active = SECTION_IDS[i].charAt(0).toUpperCase() + SECTION_IDS[i].slice(1);
+        break;
+      }
+    }
+  }
+  return active;
+}
+
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      setActiveSection(getActiveSection());
     };
 
-    // Initialize state on mount so refresh mid-page shows correct background
     handleScroll();
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -135,6 +160,17 @@ const Navbar = () => {
   const toggleMobileMenu = useCallback(() => {
     setIsOpen((prev) => !prev);
   }, []);
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, item: (typeof navigationItems)[0], closeMenu?: () => void) => {
+      if (item.name === "Home" && pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      closeMenu?.();
+    },
+    [pathname]
+  );
 
   const desktopItems = navigationItems;
   const mediumItems = navigationItems.filter((item) => item.showOnMedium);
@@ -175,7 +211,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 * index, duration: 1 }}
             >
-              <NavItem item={item} isActive={index === 0} size="lg" />
+              <NavItem item={item} isActive={item.name === activeSection} size="lg" onClick={(e) => handleNavClick(e, item)} />
             </motion.div>
           ))}
         </div>
@@ -188,7 +224,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
             >
-              <NavItem item={item} isActive={index === 0} size="sm" />
+              <NavItem item={item} isActive={item.name === activeSection} size="sm" onClick={(e) => handleNavClick(e, item)} />
             </motion.div>
           ))}
         </div>
@@ -227,9 +263,9 @@ const Navbar = () => {
               >
                 <NavItem
                   item={item}
-                  isActive={index === 0}
+                  isActive={item.name === activeSection}
                   isMobile={true}
-                  onClick={closeMobileMenu}
+                  onClick={(e) => handleNavClick(e, item, closeMobileMenu)}
                 />
               </motion.div>
             ))}
