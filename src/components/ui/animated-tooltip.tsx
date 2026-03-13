@@ -37,14 +37,18 @@ export const AnimatedTooltip = ({
   );
 
   const handleMouseMove = (event: React.MouseEvent<HTMLImageElement>) => {
+    const target = event.currentTarget;
+    if (!target) return;
+
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
 
+    const offsetX = event.nativeEvent.offsetX;
+    const halfWidth = target.offsetWidth / 2;
+
     animationFrameRef.current = requestAnimationFrame(() => {
-      const target = event.currentTarget;
-      const halfWidth = target.offsetWidth / 2;
-      x.set(event.nativeEvent.offsetX - halfWidth);
+      x.set(offsetX - halfWidth);
     });
   };
 
