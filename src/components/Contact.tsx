@@ -105,7 +105,7 @@ const Contact = () => {
                 target={item.primary ? undefined : "_blank"}
                 rel={item.primary ? undefined : "noopener noreferrer"}
                 className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border transition-all duration-300 overflow-hidden flex-1 min-w-0 max-w-sm sm:max-w-none ${
-                  isLeft ? "sm:mt-10 sm:mb-0" : ""
+                  isLeft ? "hidden sm:flex sm:mt-10 sm:mb-0" : ""
                 } ${
                   item.primary
                     ? "border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(14,165,233,0.15)]"
