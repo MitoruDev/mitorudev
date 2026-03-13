@@ -18,7 +18,7 @@ const Experience = () => {
             'Working in an agile team on hotel and travel products',
             'Writing clean, testable code and taking part in code reviews'
           ],
-          technologies: ['React', 'Symfony', 'PHP', 'TypeScript', 'MongoDB'],
+          technologies: ['PHP', 'Symfony', 'React', 'Vite', 'TypeScript'],
           website: 'https://www.check24.de'
         },
         {
@@ -32,7 +32,7 @@ const Experience = () => {
             'Implementing frontend and backend features with PHP and JavaScript',
             'Working with MySQL and supporting ongoing projects'
           ],
-          technologies: ['PHP', 'JavaScript', 'MySQL', 'Shopware'],
+          technologies: ['PHP', 'JavaScript', 'MySQL', 'Shopware 5', 'Shopware 6'],
           website: 'https://www.volksversand.de'
         },
         {
