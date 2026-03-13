@@ -13,13 +13,12 @@ const Experience = () => {
           position: 'Junior Fullstack Developer',
           duration: '2025 - Present',
           location: 'Essen, Germany',
-          description: 'Leading development of enterprise-scale applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices for code quality and performance.',
           achievements: [
-            'Reduced application load time by 40% through optimization',
-            'Led a team of 5 developers on major product redesign',
-            'Implemented CI/CD pipeline reducing deployment time by 60%'
+            'Developing and maintaining web applications with React and Symfony',
+            'Working in an agile team on hotel and travel products',
+            'Writing clean, testable code and taking part in code reviews'
           ],
-          technologies: ['React', 'Node.js', 'AWS', 'TypeScript', 'MongoDB'],
+          technologies: ['React', 'Symfony', 'PHP', 'TypeScript', 'MongoDB'],
           website: 'https://www.check24.de'
         },
         {
@@ -28,13 +27,12 @@ const Experience = () => {
           position: 'Fullstack Developer Apprentice',
           duration: '2024 - 2025',
           location: 'Hagen, Germany',
-          description: 'Developed and maintained multiple client projects ranging from e-commerce platforms to SaaS applications. Collaborated with designers and product managers to deliver exceptional user experiences.',
           achievements: [
-            'Built 15+ responsive web applications',
-            'Improved customer satisfaction scores by 25%',
-            'Introduced automated testing reducing bugs by 50%'
+            'Building and maintaining e-commerce solutions with Shopware',
+            'Implementing frontend and backend features with PHP and JavaScript',
+            'Working with MySQL and supporting ongoing projects'
           ],
-          technologies: ['PHP', 'Javascript', 'MySQL', 'Shopware 5', 'Shopware 6'],
+          technologies: ['PHP', 'JavaScript', 'MySQL', 'Shopware'],
           website: 'https://www.volksversand.de'
         },
         {
@@ -43,13 +41,12 @@ const Experience = () => {
           position: 'Backend Developer Apprentice',
           duration: '2022 - 2024',
           location: 'Hagen, Germany',
-          description: 'Focused on creating intuitive user interfaces for startup products. Worked closely with UX designers to implement pixel-perfect designs and smooth user interactions.',
           achievements: [
-            'Developed mobile-first responsive designs',
-            'Increased user engagement by 35%',
-            'Contributed to 3 successful product launches'
+            'Developing and maintaining backend systems with RPG',
+            'Working with databases and supporting internal tools',
+            'Contributing to software lifecycle and documentation'
           ],
-          technologies: ['RPG 3', 'RPG Free', 'MySQL', 'HTML', 'CSS'],
+          technologies: ['RPG', 'MySQL', 'HTML', 'CSS'],
           website: 'https://www.westfalia.de'
         }
       ]

@@ -46,7 +46,7 @@ const Contact = () => {
         lineWidth={1.5}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-5xl px-6 md:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-6 md:px-8 flex flex-col items-center">
         <motion.div
           className="text-sm sm:text-base md:text-xl text-blue-300 font-medium mb-2 md:mb-3 text-center"
           initial={{ opacity: 0, y: 8 }}
@@ -94,7 +94,7 @@ const Contact = () => {
           Have a project in mind or just want to say hi? I&apos;d love to hear from you.
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4 md:gap-6 justify-center">
+        <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4 md:gap-6 justify-center w-full">
           {contactLinks.map((item, index) => {
             const Icon = item.icon;
             const isLeft = index === 0;
@@ -104,7 +104,7 @@ const Contact = () => {
                 href={item.href}
                 target={item.primary ? undefined : "_blank"}
                 rel={item.primary ? undefined : "noopener noreferrer"}
-                className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border transition-all duration-300 overflow-hidden flex-1 min-w-0 max-w-sm sm:max-w-none ${
+                className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border transition-all duration-300 overflow-hidden flex-1 min-w-0 w-full sm:max-w-none ${
                   isLeft ? "hidden sm:flex sm:mt-10 sm:mb-0" : ""
                 } ${
                   item.primary
