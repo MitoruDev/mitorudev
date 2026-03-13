@@ -80,6 +80,29 @@ const DefaultCursorSVG: FC = () => {
   );
 };
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+      const isWideEnough = window.innerWidth >= 768;
+      setIsDesktop(hasFinePointer && isWideEnough);
+    };
+
+    check();
+    const mql = window.matchMedia("(pointer: fine)");
+    mql.addEventListener("change", check);
+    window.addEventListener("resize", check);
+    return () => {
+      mql.removeEventListener("change", check);
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
+  return isDesktop;
+}
+
 export function SmoothCursor({
   cursor = <DefaultCursorSVG />,
   springConfig = {
@@ -89,6 +112,7 @@ export function SmoothCursor({
     restDelta: 0.001,
   },
 }: SmoothCursorProps) {
+  const isDesktop = useIsDesktop();
   const [, setIsMoving] = useState(false);
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
   const velocity = useRef<Position>({ x: 0, y: 0 });
@@ -110,6 +134,7 @@ export function SmoothCursor({
   });
 
   useEffect(() => {
+    if (!isDesktop) return;
     const updateVelocity = (currentPos: Position) => {
       const currentTime = Date.now();
       const deltaTime = currentTime - lastUpdateTime.current;
@@ -186,7 +211,9 @@ export function SmoothCursor({
       document.documentElement.style.cursor = "";
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [cursorX, cursorY, rotation, scale]);
+  }, [isDesktop, cursorX, cursorY, rotation, scale]);
+
+  if (!isDesktop) return null;
 
   return (
     <motion.div
