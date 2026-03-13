@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center sm:text-left">
           <span className="text-slate-300 text-sm sm:text-base">Website created by</span>
           <a 
-            href="https://github.com/MitoruDev" 
+            href="https://instagram.com/canersjourney" 
             className="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium text-sm sm:text-base"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const Footer = () => {
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/caner-elmas" 
+              href="https://www.linkedin.com/in/caner-elmas15/" 
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
               target="_blank"
               rel="noopener noreferrer"
@@ -40,7 +40,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a 
-              href="mailto:caner@example.com" 
+              href="mailto:elmascaner2005@gmail.com" 
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
             >
               Contact

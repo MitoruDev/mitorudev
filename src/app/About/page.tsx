@@ -188,13 +188,13 @@ const AboutBentoPage = () => {
               <h4 className="text-lg font-semibold text-white/90">Get in touch</h4>
             </div>
             <div className="flex items-center gap-3">
-              <a href="mailto:contact@caner-elmas.de" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
+              <a href="mailto:elmascaner2005@gmail.com" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
                 Email
               </a>
               <a href="https://github.com/MitoruDev" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
                 <Github className="h-4 w-4" />
               </a>
-              <a href="https://www.linkedin.com/in/caner-elmas/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
+              <a href="https://www.linkedin.com/in/caner-elmas15/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
                 <Linkedin className="h-4 w-4" />
               </a>
             </div>

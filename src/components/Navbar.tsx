@@ -9,7 +9,6 @@ import {
   Home,
   User,
   Code,
-  Briefcase,
   MessageCircle,
   GraduationCap,
 } from "lucide-react";
@@ -17,18 +16,17 @@ import { motion } from "motion/react";
 
 const navigationItems = [
   { name: "Home", href: "/", icon: Home, showOnMedium: true },
-  { name: "About", href: "/about", icon: User, showOnMedium: true },
-  { name: "Skills", href: "/skills", icon: Code, showOnMedium: true },
+  { name: "About", href: "/#about", icon: User, showOnMedium: true },
+  { name: "Skills", href: "/#skills", icon: Code, showOnMedium: true },
   {
     name: "Experience",
-    href: "/experience",
+    href: "/#experience",
     icon: GraduationCap,
     showOnMedium: false,
   },
-  { name: "Projects", href: "/projects", icon: Briefcase, showOnMedium: true },
   {
     name: "Contact",
-    href: "/contact",
+    href: "/#contact",
     icon: MessageCircle,
     showOnMedium: false,
   },
@@ -71,10 +69,13 @@ const NavItem = ({
   }
 
   return (
-    <div className={`${baseClasses} ${activeClasses}`}>
+    <Link
+      href={item.href}
+      className={`${baseClasses} ${activeClasses}`}
+    >
       <Icon size={iconSize} />
-      <Link href={item.href}>{item.name}</Link>
-    </div>
+      <span>{item.name}</span>
+    </Link>
   );
 };
 
@@ -88,22 +89,26 @@ const HireMeButton = ({
   entranceDelay?: number;
 }) => {
   const baseClasses =
-    "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-200 text-sm font-medium shadow-lg hover:shadow-xl";
+    "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-200 text-sm font-medium shadow-lg hover:shadow-xl inline-flex items-center justify-center";
   const mobileClasses = "w-full mt-2 px-3 py-2 rounded-lg";
   const desktopClasses = "px-4 py-2 rounded-lg";
 
   return (
-    <motion.button
+    <motion.div
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: "easeOut", delay: entranceDelay }}
       whileHover={{ scale: 1.04, y: -1 }}
       whileTap={{ scale: 0.98 }}
-      className={`${baseClasses} ${isMobile ? mobileClasses : desktopClasses}`}
-      onClick={onClick}
     >
-      Hire me
-    </motion.button>
+      <Link
+        href="/#contact"
+        className={`${baseClasses} ${isMobile ? mobileClasses : desktopClasses}`}
+        onClick={onClick}
+      >
+        Hire me
+      </Link>
+    </motion.div>
   );
 };
 
@@ -151,7 +156,7 @@ const Navbar = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="text-lg sm:text-xl lg:text-2xl font-bold px-2 sm:px-4 lg:px-8">
+          <Link href="/" className="text-lg sm:text-xl lg:text-2xl font-bold px-2 sm:px-4 lg:px-8 block">
             <AnimatedGradientText
               speed={1}
               colorFrom="#38bdf8"
@@ -159,7 +164,7 @@ const Navbar = () => {
             >
               Caner Elmas
             </AnimatedGradientText>
-          </div>
+          </Link>
         </motion.div>
 
         <div className="hidden lg:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">

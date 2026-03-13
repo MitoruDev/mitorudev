@@ -7,6 +7,7 @@ import CircularText from "@/components/CircularText";
 import Skills from "@/components/Skills";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import Experience from "@/components/Experience";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <About />
       <Skills />
       <Experience />
+      <Contact />
       <Footer />
       <SmoothCursor />
       <ScrollToTop className="fixed bottom-13 right-12.5 z-40" />

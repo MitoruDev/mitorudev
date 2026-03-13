@@ -129,7 +129,7 @@ const Hero = () => {
               <GithubIcon size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/caner-elmas/"
+              href="https://www.linkedin.com/in/caner-elmas15/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -138,7 +138,7 @@ const Hero = () => {
               <LinkedinIcon size={20} />
             </a>
             <a
-              href="mailto:contact@canerelmas.de"
+              href="mailto:elmascaner2005@gmail.com"
               aria-label="Email"
               className="p-3 rounded-full border border-slate-700 text-slate-300 hover:text-blue-400 hover:border-blue-600/50 hover:bg-blue-600/20 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40"
             >

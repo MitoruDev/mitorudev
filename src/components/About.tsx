@@ -74,10 +74,10 @@ const About = () => {
               <motion.a whileHover={{ y: -1 }} href="https://github.com/MitoruDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <GithubIcon size={18} className="sm:h-5 sm:w-5" />
               </motion.a>
-              <motion.a whileHover={{ y: -1 }} href="https://www.linkedin.com/in/caner-elmas/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <motion.a whileHover={{ y: -1 }} href="https://www.linkedin.com/in/caner-elmas15/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <LinkedinIcon size={18} className="sm:h-5 sm:w-5" />
               </motion.a>
-              <motion.a whileHover={{ y: -1 }} href="mailto:contact@caner-elmas.de" target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <motion.a whileHover={{ y: -1 }} href="mailto:elmascaner2005@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
                 <MailIcon size={18} className="sm:h-5 sm:w-5" />
               </motion.a>
             </div>
