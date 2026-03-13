@@ -55,7 +55,8 @@ const Hero = () => {
               Developer
             </AnimatedGradientText>
           </motion.h1>
-          <motion.p className="text-xl md:text-2xl text-slate-300 mb-8"
+          <motion.p
+            className="text-xl md:text-2xl text-slate-300 mb-8"
             initial={heroSlideInitial}
             whileInView={heroSlideAnimate}
             viewport={{ once: true, amount: 0.6 }}

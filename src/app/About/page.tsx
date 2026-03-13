@@ -86,9 +86,9 @@ const AboutBentoPage = () => {
           <div className="relative z-10 flex h-full flex-col items-start justify-center p-5">
             <div className="flex items-center gap-3 text-white/90">
               <Sparkles className="h-6 w-6 text-fuchsia-300" />
-              <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#0ea5e9] via-[#9333ea] to-[#d946ef] bg-clip-text text-transparent">
+              <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#0ea5e9] via-[#9333ea] to-[#d946ef] bg-clip-text text-transparent">
                 Caner Elmas
-              </h3>
+              </h2>
             </div>
             <p className="mt-2 text-slate-300">Based in Germany • Building delightful web experiences</p>
           </div>
@@ -152,7 +152,7 @@ const AboutBentoPage = () => {
           <div className="relative z-10 h-full p-5">
             <div className="mb-3 flex items-center gap-2">
               <Activity className="h-5 w-5 text-emerald-300" />
-              <h4 className="text-lg font-semibold text-white/90">Activity</h4>
+              <h3 className="text-lg font-semibold text-white/90">Activity</h3>
               <span className="ml-2 rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-white/70">last 14×6</span>
             </div>
             <div className="relative">
@@ -185,7 +185,7 @@ const AboutBentoPage = () => {
           <div className="relative z-10 flex h-full flex-col items-center justify-center gap-3 p-5">
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-cyan-300" />
-              <h4 className="text-lg font-semibold text-white/90">Get in touch</h4>
+              <h3 className="text-lg font-semibold text-white/90">Get in touch</h3>
             </div>
             <div className="flex items-center gap-3">
               <a href="mailto:elmascaner2005@gmail.com" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">

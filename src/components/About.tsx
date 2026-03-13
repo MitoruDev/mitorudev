@@ -51,12 +51,12 @@ const About = () => {
             About me
           </motion.div>
           <motion.div variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide">
               Hello, I&apos;m{" "}
               <AnimatedGradientText speed={1} colorFrom="#0ea5e9" colorTo="#d946ef">
                 Caner Elmas
               </AnimatedGradientText>
-            </h1>
+            </h2>
           </motion.div>
           <motion.div className="mt-3 md:mt-2" variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
             <span className="rounded-md py-1.5 px-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-200 text-xs sm:text-sm font-medium shadow-lg hover:shadow-xl">Fullstack Developer</span>
@@ -68,7 +68,7 @@ const About = () => {
             Based in Germany, I work with clients worldwide to bring their ideas to life through modern web technologies and best practices. Let&apos;s collaborate and create something amazing together!
           </motion.div>
           <motion.div className="pt-6 md:pt-8" variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
-            <h4 className="text-base sm:text-lg font-semibold text-white mb-3 md:mb-4">Follow Me</h4>
+            <h3 className="text-base sm:text-lg font-semibold text-white mb-3 md:mb-4">Follow Me</h3>
             <div className="flex gap-3 sm:gap-4">
               <motion.a whileHover={{ y: -1 }} href="https://github.com/MitoruDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <GithubIcon size={18} className="sm:h-5 sm:w-5" />
