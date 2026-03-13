@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
-import Image from "next/image";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
 const About = () => {
@@ -53,7 +52,7 @@ const About = () => {
           </motion.div>
           <motion.div variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide">
-              Hello, I'm{" "}
+              Hello, I&apos;m{" "}
               <AnimatedGradientText speed={1} colorFrom="#0ea5e9" colorTo="#d946ef">
                 Caner Elmas
               </AnimatedGradientText>
@@ -63,10 +62,10 @@ const About = () => {
             <span className="rounded-md py-1.5 px-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all duration-200 text-xs sm:text-sm font-medium shadow-lg hover:shadow-xl">Fullstack Developer</span>
           </motion.div>
           <motion.div className="mt-6 md:mt-8 text-sm sm:text-base leading-relaxed md:leading-7" variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-            I am currently working with a lot of technologies that are needed to build highly functional solutions. I'm passionate about creating digital experiences that combine beautiful design with robust functionality.
+            I am currently working with a lot of technologies that are needed to build highly functional solutions. I&apos;m passionate about creating digital experiences that combine beautiful design with robust functionality.
           </motion.div>
           <motion.div className="mt-3 md:mt-4 text-sm sm:text-base leading-relaxed md:leading-7" variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-            Based in Germany, I work with clients worldwide to bring their ideas to life through modern web technologies and best practices. Let's collaborate and create something amazing together!
+            Based in Germany, I work with clients worldwide to bring their ideas to life through modern web technologies and best practices. Let&apos;s collaborate and create something amazing together!
           </motion.div>
           <motion.div className="pt-6 md:pt-8" variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
             <h4 className="text-base sm:text-lg font-semibold text-white mb-3 md:mb-4">Follow Me</h4>

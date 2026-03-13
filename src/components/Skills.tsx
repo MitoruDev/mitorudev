@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
-import { AnimatedGradientText } from "./magicui/animated-gradient-text";
 import {
   React as ReactIcon,
   Figma,

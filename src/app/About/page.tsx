@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Code2, User, Sparkles, Award, Briefcase, Calendar, Mail, Github, Linkedin, Activity } from "lucide-react";
+import { Code2, Sparkles, Award, Briefcase, Calendar, Mail, Github, Linkedin, Activity } from "lucide-react";
 import { motion } from "motion/react";
 
 const AboutBentoPage = () => {

@@ -76,7 +76,7 @@ const CircularText: React.FC<CircularTextProps> = ({
     return () => {
       isCancelled = true;
     };
-  }, [spinDuration, entranceDelay, controls]);
+  }, [spinDuration, entranceDelay, controls, rotation]);
 
   const handleHoverStart = () => {
     const start = rotation.get();

@@ -5,7 +5,6 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
-  Send,
   Download,
   ArrowDown,
   Mail,
@@ -37,7 +36,7 @@ const Hero = () => {
             delay={200}
             startOnView
           >
-            👋 Hey, I'm Caner
+            👋 Hey, I&apos;m Caner
           </TypingAnimation>
           <motion.h1
             className="font-bold tracking-tight leading-[0.9] text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6"
@@ -62,9 +61,9 @@ const Hero = () => {
             viewport={{ once: true, amount: 0.6 }}
             transition={heroSpring(0.6)}
           >
-            I'm a fullstack developer based in Germany.
+            I&apos;m a fullstack developer based in Germany.
             <br />
-            Your ideas, our web. Let's start together.
+            Your ideas, our web. Let&apos;s start together.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
