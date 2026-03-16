@@ -165,6 +165,7 @@ const Navbar = () => {
     (e: React.MouseEvent<HTMLAnchorElement>, item: (typeof navigationItems)[0], closeMenu?: () => void) => {
       if (item.name === "Home" && pathname === "/") {
         e.preventDefault();
+        window.history.replaceState(null, "", window.location.pathname);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
       closeMenu?.();
