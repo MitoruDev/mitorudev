@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
-import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import { LinkedinIcon, MailIcon } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 
@@ -70,9 +70,6 @@ const About = () => {
           <motion.div className="pt-6 md:pt-8" variants={{ hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0 } }} transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}>
             <h3 className="text-base sm:text-lg font-semibold text-white mb-3 md:mb-4">Follow Me</h3>
             <div className="flex gap-3 sm:gap-4">
-              <motion.a whileHover={{ y: -1 }} href="https://github.com/MitoruDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <GithubIcon size={18} className="sm:h-5 sm:w-5" />
-              </motion.a>
               <motion.a whileHover={{ y: -1 }} href="https://www.linkedin.com/in/caner-elmas15/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <LinkedinIcon size={18} className="sm:h-5 sm:w-5" />
               </motion.a>

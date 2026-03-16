@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Code2, Sparkles, Award, Briefcase, Calendar, Mail, Github, Linkedin, Activity } from "lucide-react";
+import { Code2, Sparkles, Award, Briefcase, Calendar, Mail, Linkedin, Activity } from "lucide-react";
 import { motion } from "motion/react";
 
 const AboutBentoPage = () => {
@@ -190,9 +190,6 @@ const AboutBentoPage = () => {
             <div className="flex items-center gap-3">
               <a href="mailto:elmascaner2005@gmail.com" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
                 Email
-              </a>
-              <a href="https://github.com/MitoruDev" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
-                <Github className="h-4 w-4" />
               </a>
               <a href="https://www.linkedin.com/in/caner-elmas15/" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-white/90 backdrop-blur-md transition hover:bg-white/10">
                 <Linkedin className="h-4 w-4" />

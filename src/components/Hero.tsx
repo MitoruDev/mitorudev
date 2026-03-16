@@ -2,7 +2,6 @@
 import React from "react";
 import DarkVeil from "../../bg/DarkVeil/DarkVeil";
 import {
-  GithubIcon,
   LinkedinIcon,
   MailIcon,
   Download,
@@ -119,15 +118,6 @@ const Hero = () => {
             viewport={{ once: true, amount: 0.6 }}
             transition={heroSpring(1)}
           >
-            <a
-              href="https://github.com/MitoruDev"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="p-3 rounded-full border border-slate-700 text-slate-300 hover:text-blue-400 hover:border-blue-600/50 hover:bg-blue-600/20 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40"
-            >
-              <GithubIcon size={20} />
-            </a>
             <a
               href="https://www.linkedin.com/in/caner-elmas15/"
               target="_blank"

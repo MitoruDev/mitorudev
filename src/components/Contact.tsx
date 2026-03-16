@@ -3,17 +3,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { AnimatedGradientText } from "./magicui/animated-gradient-text";
-import { Mail, GithubIcon, LinkedinIcon, Send, MessageCircle } from "lucide-react";
+import { Mail, LinkedinIcon, Send, MessageCircle } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
 
 const contactLinks = [
-  {
-    label: "GitHub",
-    href: "https://github.com/MitoruDev",
-    icon: GithubIcon,
-    description: "Code & projects",
-    primary: false,
-  },
   {
     label: "Email",
     href: "mailto:elmascaner2005@gmail.com",
@@ -94,19 +87,16 @@ const Contact = () => {
           Have a project in mind or just want to say hi? I&apos;d love to hear from you.
         </motion.p>
 
-        <div className="flex flex-col sm:flex-row items-center sm:items-end gap-4 md:gap-6 justify-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-2xl mx-auto">
           {contactLinks.map((item, index) => {
             const Icon = item.icon;
-            const isLeft = index === 0;
             return (
               <motion.a
                 key={item.label}
                 href={item.href}
                 target={item.primary ? undefined : "_blank"}
                 rel={item.primary ? undefined : "noopener noreferrer"}
-                className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border transition-all duration-300 overflow-hidden flex-1 min-w-0 w-full sm:max-w-none ${
-                  isLeft ? "hidden sm:flex sm:mt-10 sm:mb-0" : ""
-                } ${
+                className={`group relative flex flex-col items-center gap-4 p-6 md:p-8 rounded-2xl border transition-all duration-300 overflow-hidden min-w-0 ${
                   item.primary
                     ? "border-cyan-500/30 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(14,165,233,0.15)]"
                     : "border-slate-700/60 bg-slate-900/40 hover:border-slate-600 hover:bg-slate-800/50 hover:shadow-xl hover:shadow-slate-900/50"

@@ -24,14 +24,6 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-6">
             <a 
-              href="https://github.com/MitoruDev" 
-              className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a 
               href="https://www.linkedin.com/in/caner-elmas15/" 
               className="text-slate-400 hover:text-blue-400 transition-colors duration-200 text-sm"
               target="_blank"

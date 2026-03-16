@@ -18,7 +18,6 @@ import {
   TypeScript,
   ThreeJsLight,
   PHP,
-  GitHubLight,
   GitLab,
   Bitbucket,
   Jira,
@@ -200,12 +199,6 @@ const Skills = () => {
           level: 95,
           description: "Version Control",
           icon: <Git size={28} />,
-        },
-        {
-          name: "GitHub",
-          level: 95,
-          description: "Version Control",
-          icon: <GitHubLight size={28} />,
         },
         {
           name: "GitLab",
