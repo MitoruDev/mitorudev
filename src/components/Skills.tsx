@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, LayoutGrid } from "lucide-react";
 import { BackgroundBeams } from "./ui/background-beams";
 import {
   React as ReactIcon,
@@ -193,6 +193,12 @@ const Skills = () => {
           level: 88,
           description: "Design Tool",
           icon: <Figma size={28} />,
+        },
+        {
+          name: "Sanity CMS",
+          level: 80,
+          description: "Headless CMS",
+          icon: <LayoutGrid size={28} />,
         },
         {
           name: "Git",
