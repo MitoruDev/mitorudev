@@ -49,7 +49,7 @@ const AboutBentoPage = () => {
           >
             <div className="relative h-32 w-32 sm:h-40 sm:w-40 md:h-44 md:w-44 rounded-full overflow-hidden ring-2 ring-purple-500/40 shadow-xl">
               <Image
-                src="/pfp.png"
+                src="/canerelmas.png"
                 alt="Caner Elmas"
                 fill
                 sizes="(min-width: 768px) 224px, (min-width: 640px) 192px, 160px"

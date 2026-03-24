@@ -35,7 +35,7 @@ const Hero = () => {
             delay={200}
             startOnView
           >
-            👋 Hey, I&apos;m Caner
+            👋 Hello, I&apos;m Caner Elmas
           </TypingAnimation>
           <motion.h1
             className="font-bold tracking-tight leading-[0.9] text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6"

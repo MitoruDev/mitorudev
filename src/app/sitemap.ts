@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://caner-elmas.de";
   const now = new Date();
+  const withBase = (path: string) => path;
   return [
-    { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/About`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: withBase("/"), lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: withBase("/About"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 }
 

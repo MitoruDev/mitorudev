@@ -31,7 +31,7 @@ const About = () => {
               id: 1,
               name: "Caner Elmas",
               designation: "Fullstack Developer",
-              image: "/pfp.png",
+              image: "/canerelmas.png",
             },
           ]}
           imageClassName="h-40 w-40 sm:h-48 sm:w-48 md:h-64 md:w-64 ring-2 ring-purple-500 shadow-lg"
